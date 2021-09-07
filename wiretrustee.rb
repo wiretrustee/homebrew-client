@@ -12,22 +12,22 @@ class Wiretrustee < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-rc.2/wiretrustee_0.1.0-rc.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b7b4afcf71080763d884c3957d82a053aa5fab8440573d4e69b0bf5fcdbdcc22"
+      sha256 "13259400a3629c43c3aae1d0467e19140eff48e404648f64a4807e1603754974"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-rc.2/wiretrustee_0.1.0-rc.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "e78676e489354081b07b20835e21c6446e9d01e8d36be7c25d4db5dba252a3ca"
+      sha256 "1c066bf20664c53d27caf9d4ddb07d3154e210d0c3f602c48551af8d73646918"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-rc.2/wiretrustee_0.1.0-rc.2_linux_armv6.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c7d5e22c84f22974ebc51f2aadeb37d3a086b5cbbbd4e455d8e924583f944bed"
+      sha256 "1761155b80fec612d5b96d8a2dc5650c3545c4ad78a1a231b6f165aa2a74d4aa"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-rc.2/wiretrustee_0.1.0-rc.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b38afcd0ce43dbd90c0ec75e28a919efc5c37ee5792139752e68593b22479c54"
+      sha256 "ac6c515c714892bcdcea399324ec0f19546da74a476524430ff729c28573b360"
     end
   end
 
