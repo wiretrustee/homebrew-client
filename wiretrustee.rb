@@ -5,29 +5,29 @@
 class Wiretrustee < Formula
   desc "Wiretrustee project."
   homepage "https://wiretrustee.com/"
-  version "0.1.0-beta.1"
+  version "0.1.0-beta.2"
   license "BSD3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.1/wiretrustee_0.1.0-beta.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "e9a1c8d84a870e47cf0f1af28949e3028258d61741469861a4e123b5d3557376"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.2/wiretrustee_0.1.0-beta.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "1d6a0ef71a28d8861af77d4bac7a1dc15d726b3e52b54bcae5560c69fdd0d089"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.1/wiretrustee_0.1.0-beta.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2700ed47007cbc591c38abd8ed2119df5e2226f5b12a774c6b98679292aa9e2a"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.2/wiretrustee_0.1.0-beta.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "007ed72d8a091c50fc7659a01a78c0709c50ea97018dbee9ca4baf4e4b40b575"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.1/wiretrustee_0.1.0-beta.1_linux_armv6.tar.gz", :using => CurlDownloadStrategy
-      sha256 "44e3908f39d406352b9f958b48ca65f66b67ce9ffa1c002b4383829654ba2c65"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.2/wiretrustee_0.1.0-beta.2_linux_armv6.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4a89fc6c1d78e4249e84eeeec2d161feba709e8f4716e67f5c58dd613afb5364"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.1/wiretrustee_0.1.0-beta.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "29852c47ee367e0412c044e1030e609c86cc1dfb2de8fc22945ec33046c5654f"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.1.0-beta.2/wiretrustee_0.1.0-beta.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d7b4845eb3f489037730bab4249c64f1914b4a6b71b3aff5d49aa032832720f7"
     end
   end
 
