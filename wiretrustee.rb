@@ -5,21 +5,21 @@
 class Wiretrustee < Formula
   desc "Wiretrustee project."
   homepage "https://wiretrustee.com/"
-  version "0.2.3"
+  version "0.3.0"
   license "BSD3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.2.3/wiretrustee_0.2.3_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d514417622747441ad5faab7665df7a20bfeeb3ff97e8545bc56c41c83f36d49"
+    if Hardware::CPU.intel?
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.3.0/wiretrustee_0.3.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "625a170a842ef491237d97da909959c6e1122257767696bbe92437c204ed9756"
 
       def install
         bin.install "wiretrustee"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.2.3/wiretrustee_0.2.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b8a1953667986627b325d130e3d16d3218edfb1e86e65de8cec071f8173e924f"
+    if Hardware::CPU.arm?
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.3.0/wiretrustee_0.3.0_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "addee5e46583219c1e39055859d90ad2e6f066d9bc95b15efafb2cb7f16cdfe9"
 
       def install
         bin.install "wiretrustee"
@@ -29,24 +29,24 @@ class Wiretrustee < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.2.3/wiretrustee_0.2.3_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "75edde0df04b35f7a039636dd7e005e4bfb89bf06fc7c278e4b34bfd24fad36c"
-
-      def install
-        bin.install "wiretrustee"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.2.3/wiretrustee_0.2.3_linux_armv6.tar.gz", :using => CurlDownloadStrategy
-      sha256 "3c9f8b51f9301c24433c9dad5bf9d6ff9a9a656251e1019bacd4cee655405dcc"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.3.0/wiretrustee_0.3.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "2818a6e32deb4c7384543379be0f91c5a4eb1ceb4b225848e38e8ccf854759dd"
 
       def install
         bin.install "wiretrustee"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.2.3/wiretrustee_0.2.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d0a49fdf2939e590f73ff371ce54007533747b8b49180efb06f0abafce7c13eb"
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.3.0/wiretrustee_0.3.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "da92f9d596990591e86363239cb5cc0fd257e6e3b2fde25514a91d722ed27099"
+
+      def install
+        bin.install "wiretrustee"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/wiretrustee/wiretrustee/releases/download/v0.3.0/wiretrustee_0.3.0_linux_armv6.tar.gz", :using => CurlDownloadStrategy
+      sha256 "c7de3ba0d904d1b2f35f02ec08e1b2d07b243e48adfe8a3768a95b7e6916449b"
 
       def install
         bin.install "wiretrustee"
